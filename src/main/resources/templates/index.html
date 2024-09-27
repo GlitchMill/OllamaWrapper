@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ollama Wrapper</title>
+</head>
+<body>
+    <h1>Ollama Wrapper</h1>
+    <form action="#" th:action="@{/generate}" method="post">
+        <input type="text" name="prompt" placeholder="Enter your prompt" required>
+        <button type="submit">Generate</button>
+    </form>
+    <div th:if="${response}">
+        <h2>Response:</h2>
+        <p th:text="${response}"></p>
+    </div>
+</body>
+</html>
+
